@@ -1,0 +1,171 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+
+    &::-webkit-scrollbar {
+        display: none;
+      }
+      
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+
+}
+
+body {
+
+    margin: 0;
+    padding: 0;
+    background-color: black;
+
+}
+
+.frame {
+
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.wrapper {
+
+    visibility: hidden;
+    background-color: #eee;
+    display: grid;
+    grid-template-columns: repeat(20, auto);
+    height: 242px;
+    grid-auto-flow: row;
+    border: 1px solid black;
+
+}
+
+.btn {
+
+    border: 0;
+    outline: 0;
+    background-color: rgb(34, 34, 165);
+    color: white;
+    padding: 8px 16px;
+    margin-top: 32px;
+    border-radius: 32px;
+    transition: background-color .3s ease-in-out;
+    cursor: pointer;
+
+}
+
+.btn:hover, .btn:focus {
+    background-color:rgb(59, 59, 172);
+}
+
+.stone {
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    border-collapse: collapse;
+    cursor: pointer;
+}
+
+.score {
+
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #eee;
+    border: 1px solid black;
+    padding: 8px 16px;
+
+}
+
+.column {
+    background-color: grey;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.end {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family:sans-serif;
+    z-index: 5;
+    background-color: #fff;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+
+.c-res {
+
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-100%);
+    color: white;
+    background-color: #2a3eb0;
+    border: 0;
+    margin: 0;
+    outline: 0;
+    padding: 8px 16px;
+    border-radius: 16px 0 0 16px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color .1s ease-in-out;
+
+    &:hover {
+        background-color: lighten(#2a3eb0, 20%);
+    }
+
+}
+.ui {
+
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    
+    & > button {
+
+        color: white;
+        background-color: #2a3eb0;
+        transition: background-color .1s ease-in-out;
+        margin: 0;
+        padding: 8px 16px;
+        border: 0;
+        outline: 0;
+        cursor: pointer;
+
+        &:hover {
+            background-color: lighten(#2a3eb0, 20%);
+        }
+
+        &:first-of-type {
+
+            border-radius: 0 0 0 16px;
+
+        }
+
+        &:nth-of-type(2) {
+
+            border-radius: 0 0 16px 0;
+
+        }
+
+    }
+
+}
