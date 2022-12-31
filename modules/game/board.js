@@ -42,7 +42,7 @@ export class Board {
         this.active = false;
 
         if (!this.interactive) return;
-        this.UI.end.style.visibility = "hidden";
+        this.UI.end.style.visibility = "visible";
         this.UI.final.innerHTML = this.score;
 
     }
