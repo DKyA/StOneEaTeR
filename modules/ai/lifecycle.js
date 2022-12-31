@@ -10,8 +10,8 @@ export class Lifecycle {
         this.S = new Stats();
         this.active_args = active_args;
 
-        this.GEN_SIZE = 100;
-        this.MAX_GEN = 2000;
+        this.GEN_SIZE = 30;
+        this.MAX_GEN = 100;
         this.VARIANCE = .25;
 
         this.leading_gene = [this.init_args(), this.init_args(), this.init_args()];
