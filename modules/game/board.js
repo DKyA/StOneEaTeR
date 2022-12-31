@@ -58,7 +58,8 @@ export class Board {
                 this.update_score();
             }
         }
-        else {
+
+        if (preset) {
             this.preset = preset;
         }
 

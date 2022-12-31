@@ -17,7 +17,7 @@ export const start = (player = "human") => {
             B.start();
             return;
         }
-    
+
         new Lifecycle(20);
     }, 1000);
 
