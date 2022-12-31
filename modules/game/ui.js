@@ -82,7 +82,7 @@ export class UI {
     //////////// Shadowing UI functions
 
     ui_start() {
-        this.buttons.forEach(b => b.addEventListener("click", () => this.B.createBoard()));
+        this.buttons.forEach(b => b.addEventListener("click", () => this.B.createBoard(true, Math.random())));
     }
 
     ui_reset() {
