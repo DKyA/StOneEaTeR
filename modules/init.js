@@ -13,7 +13,7 @@ export const start = (player = "human") => {
 
     setTimeout(() => {
         if (player === "human") {
-            const B = new Board(true, 7);
+            const B = new Board(true, Math.random());
             B.start();
             return;
         }
